@@ -27,11 +27,8 @@ const onOpenModal = (e) => {
     e.preventDefault();
 
     refs.modal.classList.add('is-open');
-    const currentImageRef = e.target.dataset.source;
-    const currentAltRef = e.target.alt;
-    
-    refs.modalImage.src = `${currentImageRef}`;
-    refs.modalImage.alt = `${currentAltRef}`;
+    refs.modalImage.src = e.target.dataset.source;
+    refs.modalImage.alt = e.target.alt;
 
     window.addEventListener('keydown', onEscapePress)
 }
